@@ -22,7 +22,7 @@ public protocol Container {
     /// - Note:
     ///     It might not exist for a `UIViewController`.
     ///
-    var parentView: UIView! { get }
+    var containerView: UIView! { get }
 
     ///
     /// The viewController of the Container.
@@ -37,7 +37,7 @@ public protocol Container {
 
 extension UIViewController: Container {
     public var viewController: UIViewController! { self }
-    public var parentView: UIView! { self.view }
+    public var containerView: UIView! { self.view }
 }
 
 extension UIView: Container {
@@ -46,7 +46,7 @@ extension UIView: Container {
     }
 
 //    public var view: UIView! { self }
-    public var parentView: UIView! { self }
+    public var containerView: UIView! { self }
 }
 
 extension UIView {
