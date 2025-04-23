@@ -268,7 +268,7 @@ extension Coordinator where Self: AnyObject {
             self?.prepareTransition(for: route) ?? .none()
         }
         return Transition(presentables: [], animationInUse: nil) { rootViewController, _, completion in
-            rootViewController.registerPeek(from: source.containerView,
+            rootViewController.registerPeek(from: source.rootContainerView,
                                             transitionGenerator: transitionGenerator,
                                             completion: completion)
         }
